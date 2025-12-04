@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Freezers</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .freezer-list {
+            display: grid;
+            gap: 20px;
+        }
+        .freezer-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #1e3c72;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            display: block;
+        }
+        .freezer-item:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .freezer-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #1e3c72;
+        }
+        .freezer-location {
+            color: #666;
+            font-size: 14px;
+        }
+        .instructions {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .qr-hint {
+            background: #1e3c72;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧊 CARDÁPIOS DIGITAIS DOS FREEZERS</h1>
+        
+        <div class="freezer-list">
+            
+            <a href="freezer1.html" class="freezer-item">
+                <div class="freezer-name">Freezer 1 - Cervejas</div>
+                <div class="freezer-location">📍 Setor A</div>
+            </a>
+            
+            <a href="freezer2.html" class="freezer-item">
+                <div class="freezer-name">Freezer 2 - Refrigerantes</div>
+                <div class="freezer-location">📍 Setor B</div>
+            </a>
+            
+            <a href="freezer3.html" class="freezer-item">
+                <div class="freezer-name">Freezer 3 - Sucos e Águas</div>
+                <div class="freezer-location">📍 Setor C</div>
+            </a>
+            
+            <a href="freezer4.html" class="freezer-item">
+                <div class="freezer-name">Freezer 4 - Bebidas Especiais</div>
+                <div class="freezer-location">📍 Setor D</div>
+            </a>
+            
+        </div>
+        
+        <div class="qr-hint">
+            <h3>📱 Como usar:</h3>
+            <p>Escaneie o QR code no freezer para ver preços atualizados</p>
+        </div>
+        
+        <div class="instructions">
+            <h3>🏢 Sistema Freezer Digital</h3>
+            <p>• Preços atualizados automaticamente</p>
+            <p>• Acesso via QR code</p>
+            <p>• Funciona em qualquer celular</p>
+            <p><strong>Atualizado: 03/12/2025 22:55</strong></p>
+        </div>
+    </div>
+    
+    <script>
+        // Contador de visitas
+        if (!localStorage.getItem('visitCount')) {
+            localStorage.setItem('visitCount', 1);
+        } else {
+            let count = parseInt(localStorage.getItem('visitCount'));
+            localStorage.setItem('visitCount', count + 1);
+        }
+    </script>
+</body>
+</html>
